@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+    has_many :favorites
+    has_many :users, through: :favorites
 
     def self.film
         require 'uri'
